@@ -26,7 +26,11 @@ When("a fibonacci sequence is started", function() {
 });
 
 When("the sequence is skipped {int} time(s)", function(value) {
-    this.fibonacci.skip(value);
+    try {
+        this.fibonacci.skip(value);
+    } catch {
+        this.itThrew();
+    }
 });
 
 When("a fibonacci sequence is initialized to {int}", function(value) {
