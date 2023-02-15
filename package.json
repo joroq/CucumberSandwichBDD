@@ -8,14 +8,14 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/Floz-Credersi/CucumberSandwichBDD.git"
+      "url": "git+https://github.com/joroq/CucumberSandwichBDD.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/Floz-Credersi/CucumberSandwichBDD/issues"
+      "url": "https://github.com/joroq/CucumberSandwichBDD/issues"
     },
-    "homepage": "https://github.com/Floz-Credersi/CucumberSandwichBDD#readme",
+    "homepage": "https://github.com/joroq/CucumberSandwichBDD#readme",
     "devDependencies": {
       "@cucumber/cucumber": "^8.11.1"
     }
