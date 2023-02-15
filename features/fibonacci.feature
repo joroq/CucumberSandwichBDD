@@ -17,3 +17,12 @@ Feature: Fibonacci number sequences
   Scenario: Sequence cannot be initialized to a non-fibonacci number
     When a fibonacci sequence is initialized to 7
     Then an exception should be thrown
+
+  Scenario: Sequence cannot be initialized to a non-number
+    When a fibonacci sequence is initialized to "apple"
+    Then an exception should be thrown
+
+  Scenario: Cannot skip by a negative number
+    Given a fibonacci sequence initialized to 2
+    When the sequence is skipped -3 times
+    Then an exception should be thrown

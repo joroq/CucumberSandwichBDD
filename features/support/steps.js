@@ -37,6 +37,14 @@ When("a fibonacci sequence is initialized to {int}", function(value) {
     }
 })
 
+When("a fibonacci sequence is initialized to {string}", function(value) {
+    try {
+        this.fibonacci.init(value);
+    } catch {
+        this.itThrew();
+    }
+})
+
 Then("the next number should be {int}", function(value) {
     assert(this.fibonacci.next() == value);
 });
