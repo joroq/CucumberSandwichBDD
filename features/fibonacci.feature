@@ -26,3 +26,17 @@ Feature: Fibonacci number sequences
     Given a fibonacci sequence initialized to 2
     When the sequence is skipped -3 times
     Then an exception should be thrown
+
+  Scenario: Sequence is initialized and skipped multiple times
+    Given a fibonacci sequence initialized to 2
+    When the sequence is skipped 3 times
+    And the sequence is initialized to 2
+    And the sequence is skipped 4 times
+    Then the state should be "The current number is 13"
+    And the next number should be 21
+
+  Scenario: Sequence is initialized, skipped and then initialized again
+    Given a fibonacci sequence initialized to 2
+    When the sequence is skipped 5 times
+    And the sequence is initialized to 2
+    Then the state should be "The current number is 2"
